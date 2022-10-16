@@ -1,4 +1,4 @@
-package com.juaracoding.selenium;
+package com.juaracoding.selenium.example;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -1,4 +1,4 @@
-package com.juaracoding.selenium;
+package com.juaracoding.selenium.example;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,6 +17,8 @@ public class SeleniumOne {
         driver.manage().window().maximize(); //Supaya jendela maximal
 
         String url = "https://demoqa.com/text-box";
+
+
 
         driver.get(url);
 

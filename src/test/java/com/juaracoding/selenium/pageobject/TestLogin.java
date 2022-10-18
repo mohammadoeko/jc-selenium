@@ -32,10 +32,11 @@ public class TestLogin {
         driver.quit();
     }
 
-    // Yang di test ada 2 test case tetapi ada 8 step
+    // Yang di test ada 3 test case tetapi ada 12 step di class login
 
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void testValidLogin() {
+        delay(Constants.DETIK);
         login.login("Admin","admin123");
         Assert.assertEquals(login.getTxtEmployeeInformation(), "Employee Information");
         System.out.println("Test case valid login");
@@ -43,9 +44,18 @@ public class TestLogin {
 
     @Test(priority = 1)
     public void testInvalidLogin() {
+        delay(Constants.DETIK);
         login.login("Admin1","admin123");
         Assert.assertEquals(login.gettxtInvalidCredentials(), "Invalid credentials");
         System.out.println("Test case invalid login");
+    }
+
+    @Test(priority = 2)
+    public void testUsernamePasswordKosong() {
+        delay(Constants.DETIK);
+        login.login("","");
+        Assert.assertEquals(login.getTxtRequired(), "Required");
+        System.out.println("Test case username password kosong");
     }
 
     static void delay(int detik) {

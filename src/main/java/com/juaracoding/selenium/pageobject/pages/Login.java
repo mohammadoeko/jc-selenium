@@ -30,10 +30,7 @@ public class Login {
     WebElement txtInvalidCredentials;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/span")
-    WebElement txtRequiredUsername;
-
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/span")
-    WebElement txtRequiredPassword;
+    WebElement txtRequired;
 
     public void login(String username, String password) {
         this.username.sendKeys(username);
@@ -48,5 +45,9 @@ public class Login {
 
     public String gettxtInvalidCredentials() {
         return txtInvalidCredentials.getText();
+    }
+
+    public String getTxtRequired() {
+        return  txtRequired.getText();
     }
 }
